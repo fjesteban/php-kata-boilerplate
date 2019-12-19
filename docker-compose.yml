@@ -6,7 +6,7 @@ services:
 
     webserver:
       image: nginx:alpine
-      container_name: php-kata-boilerplate-webserver
+      container_name: webserver
       working_dir: /application
       volumes:
           - .:/application
@@ -16,7 +16,7 @@ services:
 
     php-fpm:
       build: phpdocker/php-fpm
-      container_name: php-kata-boilerplate-php-fpm
+      container_name: app
       working_dir: /application
       volumes:
         - .:/application
